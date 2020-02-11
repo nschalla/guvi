@@ -1,0 +1,20 @@
+<h1>Please Enter the Details</h1>
+
+<form #userForm="ngForm" >
+  
+  <div class="form-group col-md-6">
+  <label for="usr">Name:</label>
+  <input type="text" required #name="ngModel" [class.is-invalid]="name.invalid && name.untouched" 
+  class="form-control" id="usr" name="name" ngModel >
+  <span class="text-danger" [class.d-none]="name.invalid ||name.untouched">Name is required</span>
+  </div> 
+{{name.className}}  
+  <div class="form-group col-md-6">
+    <label for="inputEmail4">Email</label>
+    <input type="email"  required class="form-control" id="inputEmail4"name="email" ngModel>
+  </div>
+
+  {{userForm.value | json}}
+  
+  <button (click)[disabled]="userForm.form.invalid" type="submit" class="btn btn-primary">SUBMIT</button>
+</form> 
