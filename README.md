@@ -1,4 +1,4 @@
-sample reactive form in angyular 
+sample reactive form in angular 
 
 # Forms
 
